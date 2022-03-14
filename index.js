@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 const { inspect } = require('util')
-const hyperswarm = require('hyperswarm')
+const bitswarm = require('@web4/bitswarm')
 const crypto = require('crypto')
 const figures = require('figures')
 
-const swarm = hyperswarm()
+const swarm = bitswarm()
 const topic = process.argv[2] ? process.argv[2] : 'connect-test'
 
 const k = crypto.createHash('sha256')
@@ -14,7 +14,7 @@ const k = crypto.createHash('sha256')
 
 console.log(figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star)
 console.log('  ' + figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star)
-console.log('Hyperswarm Connect-Test')
+console.log('Bitswarm Connect-Test')
 console.log('  ' + figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star)
 console.log(figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star, ' ', figures.star)
 console.log('')
@@ -23,7 +23,7 @@ function Peer (peer) {
   return peer && `${peer.host}:${peer.port}`
 }
 
-console.log(figures.play, `Joining hyperswarm under the sha256(${topic}) topic`, k.toString('hex'))
+console.log(figures.play, `Joining bitswarm under the sha256(${topic}) topic`, k.toString('hex'))
 
 swarm.on('error', function (err) {
   console.error(figures.cross, 'There was an error', err)

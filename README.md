@@ -1,9 +1,9 @@
-# @hyperswarm/connect-test
+# @web4/connect-test
 
 Create connections with peers in the 'connect-test' topic (Demo).
 
 ```
-npx @hyperswarm/connect-test
+npx @web4/connect-test
 ```
 
 You should see output like:
@@ -11,14 +11,13 @@ You should see output like:
 ```
 ★   ★   ★   ★   ★   ★
   ★   ★   ★   ★   ★
-Hyperswarm Connect-Test
+Bitswarm Connect-Test
   ★   ★   ★   ★   ★
 ★   ★   ★   ★   ★   ★
 
 ▶ Testing hole-punchability...
 ✔ Your network is hole-punchable
 
-▶ Joining hyperswarm under the sha256('connect-test') topic
 ℹ Waiting for connections...
 
 › New connection!
@@ -26,4 +25,4 @@ Hyperswarm Connect-Test
 › New connection!
 ```
 
-That's all it does! It joins the hyperswarm under the 'connect-test' topic (hashed by sha256) and then arranges connections. The connections aren't used at all.
+That's all it does! It joins the bitswarm under the 'connect-test' topic (hashed by sha256) and then arranges connections. The connections aren't used at all.
